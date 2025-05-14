@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!--This insert the background image that shows on the screen of the app-->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="479dp"
+        android:layout_height="795dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/history" />
+    <!--Unique ID for background image -->
+    <!--Width spans full screen -->
+    <!--Weight spans  full screen -->
+    <!--Scales image to fill, cropping as necessary-->
+    <!--Content Container: All interactions are held in the app layout constraint-->
+    <!--ImageView is set compatible across different versions of Android-->
+
+    <!--This text welcomes the user to the app-->
+    <TextView
+        android:id="@+id/welcomeTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to your:"
+        android:textAlignment="center"
+        android:textColor="#FFDC5F"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.149" />
+    <!--Unique ID for title-->
+    <!--Width adjusted to text length-->
+    <!--Height fixed to text content-->
+    <!--Display text-->
+    <!--Size of text-->
+    <!--Bold text style-->
+    <!--Yellow text color-->
+    <!--Text is aligned in the center-->
+    <!--App has a constraint layout throughout for flexible use-->
+
+    <!--This text interacts with the user and informs them what the app does-->
+    <TextView
+        android:id="@+id/descriptionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="Test your knowledge of history with these flashcards"
+        android:textAlignment="center"
+        android:textColor="#0D0254"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.428" />
+    <!--Unique ID for title-->
+    <!--Width adjusted to text length-->
+    <!--Height fixed to text content-->
+    <!--Display text-->
+    <!--Size of text-->
+    <!--Bold text style-->
+    <!--Dark blue text color-->
+    <!--Text is aligned in the center-->
+    <!--App has a constraint layout throughout for flexible use-->
+
+    <!--Click on button to start the quiz-->
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="12dp"
+        android:backgroundTint="#DDC89F18"
+        android:elevation="4dp"
+        android:text="Start Quiz"
+        android:textColor="#000000"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.533" />
+    <!--Unique ID to start the quiz-->
+    <!--Start margin used to set margin on the start side of the button-->
+    <!--Top margin for extra space-->
+    <!--Shadow for depth-->
+    <!--Button text-->
+    <!--Text size-->
+    <!--Gold tint color-->
+    <!--Black text color-->
+    <!--Button has a constraint layout throughout for flexible use-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
