@@ -23,58 +23,55 @@ class QuestionActivity : AppCompatActivity() {
     private var currentQuestionIndex = 0
     private var correctAnswers = 0
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
-        setContentView(R.layout.activity_question)
+        override fun onCreate(savedInstanceState: Bundle?) {
+            super.onCreate(savedInstanceState)
+            enableEdgeToEdge()
+            setContentView(R.layout.activity_question)
 
-        showQuestion()
-
-        findViewById<Button>(R.id.btnTrue).setOnClickListener { checkAnswer(true)
-        findViewById<Button>(R.id.btnFalse).setOnClickListener { checkAnswer(false)
-        findViewById<Button>(R.id.btnNext).setOnClickListener { showNextQuestion()
-    }
-
-    fun showQuestion() {
-         findViewById<TextView>(R.id.txtQuestion).text = questionScreen[currentQuestionIndex].question
-    }
-
-    fun checkAnswer(userAnswer: Boolean) {
-          val correctAnswer = questionScreen[currentQuestionIndex].answer
-          val feedback = if (userAnswer == correctAnswer) {
-              correctAnswers++
-              "Correct!"
-          } else {
-               "Incorrect."
-          }
-          findViewById<TextView>(R.id.txtFeedback).text = feedback
-    }
-
-    fun showNextQuestion() {
-        currentQuestionIndex++
-        if (currentQuestionIndex < questionScreen.size) {
             showQuestion()
-            findViewById<TextView>(R.id.txtFeedback).text = ""
-        } else {
-            val intent = Intent(this, MainActivity::class.java)
+
+            findViewById<Button>(R.id.btnTrue).setOnClickListener { checkAnswer(true)
+            findViewById<Button>(R.id.btnFalse).setOnClickListener { checkAnswer(false)
+            findViewById<Button>(R.id.btnNext).setOnClickListener { showNextQuestion()
+        }
+
+        fun showQuestion() {
+            findViewById<TextView>(R.id.txtQuestion).text =
+            questionScreen[currentQuestionIndex].question
+        }
+
+        fun checkAnswer(userAnswer: Boolean) {
+        val correctAnswer = questionScreen[currentQuestionIndex].answer
+        val feedback = if (userAnswer == correctAnswer) {
+            correctAnswers++
+            "Correct!"
+            } else {
+            "Incorrect."
+            }
+            findViewById<TextView>(R.id.txtFeedback).text = feedback
+        }
+
+        fun showNextQuestion() {
+             currentQuestionIndex++
+             if (currentQuestionIndex < questionScreen.size) {
+                 showQuestion()
+             findViewById<TextView>(R.id.txtFeedback).text = ""
+                 } else {
+        val intent = Intent(this, MainActivity::class.java)
             intent.putExtra("correctAnswers", correctAnswers)
             startActivity(intent)
-            finish()
+               finish()
+                        }
                     }
                 }
             }
         }
+    private fun showQuestion() {
     }
 
     private fun showNextQuestion() {
-        TODO("Not yet implemented")
     }
 
     private fun checkAnswer(b: Boolean) {
-        TODO("Not yet implemented")
-    }
-
-    private fun showQuestion() {
-        TODO("Not yet implemented")
     }
 }

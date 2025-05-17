@@ -26,6 +26,17 @@
     <!--ImageView is set compatible across different versions of Android-->
 
     <!--This text welcomes the user to the app-->
+    <!--Unique ID for title-->
+    <!--Width adjusted to text length-->
+    <!--Height fixed to text content-->
+    <!--Display text-->
+    <!--Size of text-->
+    <!--Bold text style-->
+    <!--Yellow text color-->
+    <!--Text is aligned in the center-->
+    <!--App has a constraint layout throughout for flexible use-->
+
+    <!--This text interacts with the user and informs them what the app does-->
     <TextView
         android:id="@+id/welcomeTextView"
         android:layout_width="wrap_content"
@@ -39,18 +50,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.149" />
-    <!--Unique ID for title-->
-    <!--Width adjusted to text length-->
-    <!--Height fixed to text content-->
-    <!--Display text-->
-    <!--Size of text-->
-    <!--Bold text style-->
-    <!--Yellow text color-->
-    <!--Text is aligned in the center-->
-    <!--App has a constraint layout throughout for flexible use-->
+        app:layout_constraintVertical_bias="0.108" />
 
-    <!--This text interacts with the user and informs them what the app does-->
     <TextView
         android:id="@+id/descriptionTextView"
         android:layout_width="0dp"

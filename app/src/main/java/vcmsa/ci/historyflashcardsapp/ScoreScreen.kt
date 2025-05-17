@@ -20,7 +20,7 @@ class ScoreScreen : AppCompatActivity() {
             else -> "Keep practicing! You got $score out of 5 questions right."
 
         }
-        findViewById<TextView>(R.id.txtTotalScore).text = "Your Score: $score"
+        findViewById<TextView>(R.id.txtTotalScore).text = "Your Score: $score /5 "
 
         findViewById<TextView>(R.id.feedbackTextView).text = "$message"
 
