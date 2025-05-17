@@ -1,13 +1,12 @@
 package vcmsa.ci.historyflashcardsapp
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 
 data class Flashcard(val question: String, val answer: Boolean)
 
@@ -51,6 +50,7 @@ class QuestionActivity : AppCompatActivity() {
             findViewById<TextView>(R.id.txtFeedback).text = feedback
         }
 
+        @SuppressLint("SuspiciousIndentation")
         fun showNextQuestion() {
              currentQuestionIndex++
              if (currentQuestionIndex < questionScreen.size) {
