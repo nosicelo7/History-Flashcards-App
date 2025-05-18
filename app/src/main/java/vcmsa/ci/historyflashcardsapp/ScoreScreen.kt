@@ -1,6 +1,7 @@
 package vcmsa.ci.historyflashcardsapp
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -29,3 +30,4 @@ class ScoreScreen : AppCompatActivity() {
         }
     }
 }
+

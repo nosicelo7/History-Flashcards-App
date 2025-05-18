@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
         // OnClickListener is set for Start the Quiz Button
         startButton.setOnClickListener {
-            // Retrieve the meal time from input field as a String
+            // Retrieve the questions input field as a String
             val intent = Intent(this, QuestionActivity::class.java)
             startActivity(intent)
         }
