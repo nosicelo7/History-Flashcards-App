@@ -1,6 +1,5 @@
 package vcmsa.ci.historyflashcardsapp
 
-import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -12,7 +11,7 @@ import androidx.core.content.ContextCompat.startActivity
 data class Flashcard(val question: String, val answer: Boolean)
 
 class QuestionActivity : AppCompatActivity() {
-    private val questionScreen = listOf(
+    private val questionActivity = listOf(
         Flashcard("The earth is flat.", false),
         Flashcard("The capital of France is Paris.", true),
         Flashcard("The capital of France is Paris.", true),
@@ -22,15 +21,6 @@ class QuestionActivity : AppCompatActivity() {
 
     private var currentQuestionIndex = 0
     private var correctAnswers = 0
-
-    private fun showQuestion() {
-    }
-
-    private fun showNextQuestion() {
-    }
-
-    private fun checkAnswer(b: Boolean) {
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -48,35 +38,37 @@ class QuestionActivity : AppCompatActivity() {
         findViewById<Button>(R.id.btnNext).setOnClickListener {
             showNextQuestion()
         }
-
-        fun showQuestion() {
-            findViewById<TextView>(R.id.txtQuestion).text =
-                questionScreen[currentQuestionIndex].question
-        }
-
-        fun checkAnswer(userAnswer: Boolean) {
-            val correctAnswer = questionScreen[currentQuestionIndex].answer
-            val feedback = if (userAnswer == correctAnswer) {
-                correctAnswers++
-                "Correct!"
-            } else {
-                "Incorrect."
-            }
-            findViewById<TextView>(R.id.txtFeedback).text = feedback
-        }
-
-        fun showNextQuestion() {
-            currentQuestionIndex++
-            if (currentQuestionIndex < questionScreen.size) {
-                showQuestion()
-                findViewById<TextView>(R.id.txtFeedback).text = ""
-            } else {
-                val intent = Intent(this, ScoreScreen::class.java)
-                intent.putExtra("correctAnswers", correctAnswers)
-                startActivity(intent)
-                finish()
-            }
-        }
     }
 }
+    fun showQuestion() {
+        findViewById<TextView>(R.id.txtQuestion).text = questionScreen[currentQuestionIndex].question
+    }
+
+    fun checkAnswer(userAnswer: Boolean) {
+        val correctAnswer = questionScreen[currentQuestionIndex].answer
+        val feedback = if (userAnswer == correctAnswer) {
+            correctAnswers++
+            "Correct!"
+        } else {
+            "Incorrect!"
+        }
+        findViewById<TextView>(R.id.txtFeedback).text = feedback
+    }
+
+    fun showNextQuestion() {
+        currentQuestionIndex++
+        if (currentQuestionIndex < questionScreen.size) {
+            showQuestion()
+        findViewById<TextView>(R.id.txtFeedback).text = ""
+            } else {
+    val intent = Intent(this, MainActivity::class.java)
+        intent.putExtra("correctAnswers", correctAnswers)
+        startActivity(intent)
+          finish()
+        }
+    }
+
+
+
+
 
