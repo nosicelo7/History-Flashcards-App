@@ -11,7 +11,7 @@ import androidx.core.content.ContextCompat.startActivity
 data class Flashcard(val question: String, val answer: Boolean)
 
 class QuestionActivity : AppCompatActivity() {
-    private val questionActivity = listOf(
+    private val questionScreen = listOf(
         Flashcard("The earth is flat.", false),
         Flashcard("The capital of France is Paris.", true),
         Flashcard("The capital of France is Paris.", true),
