@@ -18,6 +18,7 @@ import androidx.core.content.ContextCompat.startActivity
 data class Flashcard(val question: String, val answer: Boolean)
 
 class QuestionActivity : AppCompatActivity() {
+    // List of questions, each with its text and answer
     private val questionScreen = listOf(
         Flashcard("The earth is flat.", false),
         Flashcard("The capital of France is Paris.", true),
@@ -34,24 +35,30 @@ class QuestionActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_question)
 
+        // Reference UI elements by their IDs
+        val btnTrue = findViewById<Button>(R.id.btnTrue)
+        val btnFalse = findViewById<Button>(R.id.btnFalse)
+        val btnNext = findViewById<Button>(R.id.btnNext)
+
+        // Set click listeners for the buttons
+        btnTrue.setOnClickListener { checkAnswer(true) }
+        btnFalse.setOnClickListener { checkAnswer(false) }
+        btnNext.setOnClickListener { showNextQuestion() }
+
+        // Show the first question
         showQuestion()
-
-        findViewById<Button>(R.id.btnTrue).setOnClickListener {
-            checkAnswer(true)
-        }
-        findViewById<Button>(R.id.btnFalse).setOnClickListener {
-            checkAnswer(false)
-        }
-        findViewById<Button>(R.id.btnNext).setOnClickListener {
-            showNextQuestion()
-        }
-    }
-}
-    fun showQuestion() {
-        findViewById<TextView>(R.id.txtQuestion).text = questionScreen[currentQuestionIndex].question
     }
 
-    fun checkAnswer(userAnswer: Boolean) {
+    // Show the current question
+    private fun showQuestion() {
+        // Set the question text and clear the previous feedback
+        findViewById<TextView>(R.id.txtQuestion).text =
+            questionScreen[currentQuestionIndex].question
+        findViewById<TextView>(R.id.txtFeedback).text = ""
+    }
+
+    // Check the user's answer and show the feedback
+    private fun checkAnswer(userAnswer: Boolean) {
         val correctAnswer = questionScreen[currentQuestionIndex].answer
         val feedback = if (userAnswer == correctAnswer) {
             correctAnswers++
@@ -59,21 +66,25 @@ class QuestionActivity : AppCompatActivity() {
         } else {
             "Incorrect!"
         }
+        // Display the feedback
         findViewById<TextView>(R.id.txtFeedback).text = feedback
     }
 
-    fun showNextQuestion() {
+    // Move to the next question or finish the quiz
+    private fun showNextQuestion() {
         currentQuestionIndex++
         if (currentQuestionIndex < questionScreen.size) {
+            // Display the next question
             showQuestion()
-        findViewById<TextView>(R.id.txtFeedback).text = ""
-            } else {
-    val intent = Intent(this, MainActivity::class.java)
-        intent.putExtra("correctAnswers", correctAnswers)
-        startActivity(intent)
-          finish()
+        } else {
+            // All questions answered, go to result screen
+            val intent = Intent(this, ScoreScreen::class.java)
+            intent.putExtra("correctAnswers", correctAnswers)
+            startActivity(intent)
+            finish()
         }
     }
+}
 
 
 
