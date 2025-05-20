@@ -7,38 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <!--This insert the background image that shows on the screen of the app-->
-    <!--Unique ID for background image -->
-    <!--Width spans full screen -->
-    <!--Weight spans  full screen -->
-    <!--Scales image to fill, cropping as necessary-->
-    <!--Content Container: All interactions are held in the app layout constraint-->
-
-    <!--This text welcomes the user to the app-->
-    <!--Unique ID for title-->
-    <!--Width adjusted to text length-->
-    <!--Height fixed to text content-->
-    <!--Display text-->
-    <!--Size of text-->
-    <!--Bold text style-->
-    <!--Yellow text color-->
-    <!--Text is aligned in the center-->
-    <!--App has a constraint layout throughout for flexible use-->
-
-    <!--This text interacts with the user and informs them what the app does-->
-
-    <!--Unique ID for title-->
-    <!--Width adjusted to text length-->
-    <!--Height fixed to text content-->
-    <!--Display text-->
-    <!--Size of text-->
-    <!--Bold text style-->
-    <!--Dark blue text color-->
-    <!--Text is aligned in the center-->
-    <!--App has a constraint layout throughout for flexible use-->
-
-    <!--Click on button to start the quiz-->
-
+    <!--Background image added that shows on the screen of the app-->
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="423dp"
@@ -48,7 +17,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <!--Unique ID for background image -->
+    <!--Width spans full screen -->
+    <!--Weight spans  full screen -->
+    <!--Scales image to fill, cropping as necessary-->
+    <!--Content Container: All interactions are held in the app layout constraint-->
 
+    <!--The text welcomes the user to the app-->
     <TextView
         android:id="@+id/welcomeTextView"
         android:layout_width="292dp"
@@ -64,7 +39,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.141" />
+    <!--Unique ID for title-->
+    <!--Width adjusted to text length-->
+    <!--Height fixed to text content-->
+    <!--Display text-->
+    <!--Size of text-->
+    <!--Bold text style-->
+    <!--Yellow text color-->
+    <!--Text is aligned in the center-->
+    <!--App has a constraint layout throughout for flexible use-->
 
+    <!--Text interacts with the user and informs them what the app does-->
     <TextView
         android:id="@+id/descriptionTextView"
         android:layout_width="338dp"
@@ -81,7 +66,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.441" />
+    <!--Unique ID for title-->
+    <!--Width adjusted to text length-->
+    <!--Height fixed to text content-->
+    <!--Display text-->
+    <!--Size of text-->
+    <!--Bold text style-->
+    <!--Dark blue text color-->
+    <!--Text is aligned in the center-->
+    <!--App has a constraint layout throughout for flexible use-->
 
+    <!--Click on button to start the quiz-->
     <Button
         android:id="@+id/startButton"
         android:layout_width="358dp"
@@ -97,7 +92,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.561" />
-
     <!--Unique ID to start the quiz-->
     <!--Start margin used to set margin on the start side of the button-->
     <!--Top margin for extra space-->
