@@ -25,32 +25,33 @@ class ScoreScreen : AppCompatActivity() {
         setContentView(R.layout.activity_score_screen)
 
         // Retrieve the score passed from the previous activity (default to 0 if not found)
-        val score = intent.getIntExtra("score", 0)
+        val correctAnswers = intent.getIntExtra("correctAnswers",0)
         // Determine feedback message based on the score
-        val message = when {
-            score == 5 -> "Congratulations! You got all the questions right!"
-            score >= 3 -> "Good job! You got $score out of 5 questions right."
-            else -> "Keep practicing! You got $score out of 5 questions right."
-
+        val message = if (correctAnswers == 5) {
+            "Congratulations! You got all the questions right!"
+        } else if (correctAnswers >= 3) {
+            "Good job! You got $correctAnswers out of 5 questions right."
+        } else {
+            "Keep practicing! You got $correctAnswers out of 5 questions right."
         }
 
+        val txtTotalScore = findViewById<TextView>(R.id.txtTotalScore)
+        val feedbackTextView = findViewById<TextView>(R.id.feedbackTextView)
+        val btnReview = findViewById<Button>(R.id.btnReview)
+
+        txtTotalScore.text = ""
+        feedbackTextView.text = ""
+
         // Display the total score in the txtTotalScore TextView
-        findViewById<TextView>(R.id.txtTotalScore).text = "Your Score: $score /5 "
+        btnReview.setOnClickListener {
+            txtTotalScore.text = "Your Score: $correctAnswers /5 "
 
-        // Display the feedback message in the feedbackTextView
-        findViewById<TextView>(R.id.feedbackTextView).text = "$message"
-
+            // Display the feedback message in the feedbackTextView
+            feedbackTextView.text = "$message"
+        }
         // Set up the Exit button to close the app when clicked
         findViewById<Button>(R.id.btnExit).setOnClickListener {
             finishAffinity()         // Closes all activities and exits the app
         }
-
-        // Set up the Review button to open the ReviewActivity when clicked
-        findViewById<Button>(R.id.btnReview).setOnClickListener {
-            val intent = Intent(this, QuestionActivity::class.java)
-            intent.putExtra("score", score)
-            startActivity(intent)
-        }
     }
 }
-
