@@ -20,11 +20,11 @@ data class Flashcard(val question: String, val answer: Boolean)
 class QuestionActivity : AppCompatActivity() {
     // List of questions, each with its text and answer
     private val questionScreen = listOf(
-        Flashcard("The earth is flat.", false),
-        Flashcard("The capital of France is Paris.", true),
-        Flashcard("The capital of France is Paris.", true),
-        Flashcard("The Eiffel Tower is located in Paris.", true),
-        Flashcard("The Great Wall of China is visible from space.", false)
+        Flashcard("The first World War started in 1914.", false),
+        Flashcard("Mahatma Gandhi led the Salt March in India.", true),
+        Flashcard("World War I ended in 1918.", true),
+        Flashcard("The United States bought Alaska from Russia.", true),
+        Flashcard("Humans are responsible for  the extinction of the dinosaurs.", false)
     )
 
     private var currentQuestionIndex = 0
