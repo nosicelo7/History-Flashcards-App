@@ -7,6 +7,7 @@
 
 package vcmsa.ci.historyflashcardsapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.TextView
@@ -42,6 +43,13 @@ class ScoreScreen : AppCompatActivity() {
         // Set up the Exit button to close the app when clicked
         findViewById<Button>(R.id.btnExit).setOnClickListener {
             finishAffinity()         // Closes all activities and exits the app
+        }
+
+        // Set up the Review button to open the ReviewActivity when clicked
+        findViewById<Button>(R.id.btnReview).setOnClickListener {
+            val intent = Intent(this, QuestionActivity::class.java)
+            intent.putExtra("score", score)
+            startActivity(intent)
         }
     }
 }
