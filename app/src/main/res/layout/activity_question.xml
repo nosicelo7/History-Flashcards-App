@@ -18,8 +18,13 @@ tools:context=".MainActivity">
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-<!--History image added-->
+    <!--Unique ID for background image -->
+    <!--Width spans full screen -->
+    <!--Weight spans  full screen -->
+    <!--Scales image to fill, cropping as necessary-->
+    <!--Content Container: All interactions are held in the app layout constraint-->
 
+<!--Click on button to click if the answer is correct-->
     <Button
         android:id="@+id/btnTrue"
         android:layout_width="wrap_content"
@@ -35,7 +40,17 @@ tools:context=".MainActivity">
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.461" />
+    <!--Unique ID to start the quiz-->
+    <!--Start margin used to set margin on the start side of the button-->
+    <!--Top margin for extra space-->
+    <!--Shadow for depth-->
+    <!--Button text-->
+    <!--Text size is set to readable size-->
+    <!--Green tint color-->
+    <!--Black text color-->
+    <!--Button has a constraint layout throughout for flexible use-->
 
+<!--Click on button to click if the answer is incorrect-->
     <Button
         android:id="@+id/btnFalse"
         android:layout_width="wrap_content"
@@ -51,7 +66,17 @@ tools:context=".MainActivity">
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.461" />
+    <!--Unique ID to click false if the answer is incorrect-->
+    <!--Start margin used to set margin on the start side of the button-->
+    <!--Top margin for extra space-->
+    <!--Shadow for depth-->
+    <!--Button text-->
+    <!--Text size-->
+    <!--Green tint color-->
+    <!--Black text color-->
+    <!--Button has a constraint layout throughout for flexible use-->
 
+<!--Text will display the question to the user-->
     <TextView
         android:id="@+id/txtQuestion"
         android:layout_width="wrap_content"
@@ -69,7 +94,17 @@ tools:context=".MainActivity">
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.221" />
+    <!--Unique ID to display the question-->
+    <!--Width adjusted to text length-->
+    <!--Height fixed to text content-->
+    <!--Display text-->
+    <!--Size of text-->
+    <!--Bold text style-->
+    <!--Orange text color-->
+    <!--Text is aligned in the center-->
+    <!--App has a constraint layout throughout for flexible use-->
 
+<!--Text will display the feedback to the user-->
     <TextView
         android:id="@+id/txtFeedback"
         android:layout_width="53dp"
@@ -83,7 +118,17 @@ tools:context=".MainActivity">
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.521" />
+    <!--Unique ID to display the feedback-->
+    <!--Width adjusted to text length-->
+    <!--Height fixed to text content-->
+    <!--Display text-->
+    <!--Size of text-->
+    <!--Bold text style-->
+    <!--Yellow text color-->
+    <!--Text is aligned in the center-->
+    <!--App has a constraint layout throughout for flexible use-->
 
+    <!--Click on button to go to the next screen-->
     <Button
         android:id="@+id/btnNext"
         android:layout_width="wrap_content"
@@ -98,4 +143,13 @@ tools:context=".MainActivity">
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.689" />
+    <!--Unique ID to go the next screen-->
+    <!--Start margin used to set margin on the start side of the button-->
+    <!--Top margin for extra space-->
+    <!--Shadow for depth-->
+    <!--Button text-->
+    <!--Text size-->
+    <!--Gold tint color-->
+    <!--Black text color-->
+    <!--Button has a constraint layout throughout for flexible use-->
 </androidx.constraintlayout.widget.ConstraintLayout>

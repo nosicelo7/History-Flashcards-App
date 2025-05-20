@@ -7,16 +7,7 @@
     android:layout_height="match_parent"
     tools:context=".ScoreScreen">
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
+   <!--Background image added that shows on the screen of the app-->
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="436dp"
@@ -26,7 +17,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/background" />
+    <!--Unique ID for background image -->
+    <!--Width spans full screen -->
+    <!--Weight spans  full screen -->
+    <!--Scales image to fill, cropping as necessary-->
+    <!--Content Container: All interactions are held in the app layout constraint-->
 
+    <!--Text will display total score-->
     <TextView
         android:id="@+id/txtTotalScore"
         android:layout_width="wrap_content"
@@ -40,7 +37,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.354" />
+    <!--Unique ID to display the question-->
+    <!--Width adjusted to text length-->
+    <!--Height fixed to text content-->
+    <!--Display text-->
+    <!--Size of text-->
+    <!--Bold text style-->
+    <!--Blue text color-->
+    <!--Text is aligned in the center-->
+    <!--App has a constraint layout throughout for flexible use-->
 
+    <!--Text will display the feedback to the user-->
     <TextView
         android:id="@+id/feedbackTextView"
         android:layout_width="wrap_content"
@@ -55,7 +62,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.42" />
+    <!--Unique ID to display the question-->
+    <!--Width adjusted to text length-->
+    <!--Height fixed to text content-->
+    <!--Display text-->
+    <!--Size of text-->
+    <!--Bold text style-->
+    <!--Blue text color-->
+    <!--Text is aligned in the center-->
+    <!--App has a constraint layout throughout for flexible use-->
 
+    <!--Click on button to see your results from the quiz-->
     <Button
         android:id="@+id/btnReview"
         android:layout_width="wrap_content"
@@ -69,7 +86,17 @@
         app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="parent" />
+    <!--Unique ID to start the quiz-->
+    <!--Start margin used to set margin on the start side of the button-->
+    <!--Top margin for extra space-->
+    <!--Shadow for depth-->
+    <!--Button text-->
+    <!--Text size-->
+    <!--Blue tint color-->
+    <!--Black text color-->
+    <!--Button has a constraint layout throughout for flexible use-->
 
+    <!--Click on button to exit the app-->
     <Button
         android:id="@+id/btnExit"
         android:layout_width="wrap_content"
@@ -84,5 +111,14 @@
         app:layout_constraintStart_toStartOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="@+id/imageView5"
         app:layout_constraintVertical_bias="0.631" />
+    <!--Unique ID to exit the app-->
+    <!--Start margin used to set margin on the start side of the button-->
+    <!--Top margin for extra space-->
+    <!--Shadow for depth-->
+    <!--Button text-->
+    <!--Text size-->
+    <!--Green tint color-->
+    <!--Black text color-->
+    <!--Button has a constraint layout throughout for flexible use-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>
