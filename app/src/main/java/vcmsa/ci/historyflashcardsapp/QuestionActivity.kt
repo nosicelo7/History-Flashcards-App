@@ -1,3 +1,10 @@
+// Background Image reference
+// Title: History Background
+// Author: Pinterest
+// Date: 15 May 2025
+// Version: 1.0
+// Available:https://za.pinterest.com/pin/80431543340224772/
+
 package vcmsa.ci.historyflashcardsapp
 
 import android.content.Intent
