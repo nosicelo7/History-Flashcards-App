@@ -24,24 +24,13 @@
     <!--Content Container: All interactions are held in the app layout constraint-->
 
     <!--The text welcomes the user to the app-->
-    <!--Unique ID for title-->
-    <!--Width adjusted to text length-->
-    <!--Height fixed to text content-->
-    <!--Display text-->
-    <!--Size of text-->
-    <!--Bold text style-->
-    <!--Yellow text color-->
-    <!--Text is aligned in the center-->
-    <!--App has a constraint layout throughout for flexible use-->
-
-    <!--Text interacts with the user and informs them what the app does-->
     <TextView
         android:id="@+id/welcomeTextView"
         android:layout_width="292dp"
         android:layout_height="53dp"
         android:text="Welcome to your:"
         android:textAlignment="center"
-        android:textColor="#1A237E"
+        android:textColor="#040404"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -49,8 +38,18 @@
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.175" />
+        app:layout_constraintVertical_bias="0.262" />
+    <!--Unique ID for title-->
+    <!--Width adjusted to text length-->
+    <!--Height fixed to text content-->
+    <!--Display text-->
+    <!--Size of text-->
+    <!--Bold text style-->
+    <!--Black text color-->
+    <!--Text is aligned in the center-->
+    <!--App has a constraint layout throughout for flexible use-->
 
+    <!--Text interacts with the user and informs them what the app does-->
     <TextView
         android:id="@+id/descriptionTextView"
         android:layout_width="338dp"
@@ -58,7 +57,7 @@
         android:gravity="center"
         android:paddingBottom="16dp"
         android:text="Test your knowledge of history with these flashcards"
-        android:textColor="#0D0254"
+        android:textColor="#BF360C"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -73,7 +72,7 @@
     <!--Display text-->
     <!--Size of text-->
     <!--Bold text style-->
-    <!--Dark blue text color-->
+    <!--Dark orange text color-->
     <!--Text is aligned in the center-->
     <!--App has a constraint layout throughout for flexible use-->
 

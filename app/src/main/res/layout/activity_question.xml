@@ -24,22 +24,21 @@ tools:context=".MainActivity">
     <!--Scales image to fill, cropping as necessary-->
     <!--Content Container: All interactions are held in the app layout constraint-->
 
-<!--Click on button to click if the answer is correct-->
+    <!--Click on button to click if the answer is correct-->
     <Button
         android:id="@+id/btnTrue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#827717"
-        android:elevation="4dp"
         android:text="True"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.256"
+        app:layout_constraintHorizontal_bias="0.653"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.461" />
+        app:layout_constraintVertical_bias="0.474" />
     <!--Unique ID to start the quiz-->
     <!--Start margin used to set margin on the start side of the button-->
     <!--Top margin for extra space-->
@@ -50,22 +49,21 @@ tools:context=".MainActivity">
     <!--Black text color-->
     <!--Button has a constraint layout throughout for flexible use-->
 
-<!--Click on button to click if the answer is incorrect-->
+    <!--Click on button to click if the answer is incorrect-->
     <Button
         android:id="@+id/btnFalse"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:backgroundTint="#827717"
-        android:elevation="4dp"
         android:text="False"
         android:textColor="#000000"
         android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.746"
+        app:layout_constraintHorizontal_bias="0.356"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.461" />
+        app:layout_constraintVertical_bias="0.474" />
     <!--Unique ID to click false if the answer is incorrect-->
     <!--Start margin used to set margin on the start side of the button-->
     <!--Top margin for extra space-->
@@ -76,7 +74,23 @@ tools:context=".MainActivity">
     <!--Black text color-->
     <!--Button has a constraint layout throughout for flexible use-->
 
-<!--Text will display the question to the user-->
+    <!--Text will display the question to the user-->
+    <TextView
+        android:id="@+id/txtQuestion"
+        android:layout_width="289dp"
+        android:layout_height="97dp"
+        android:gravity="center"
+        android:paddingBottom="16dp"
+        android:text="Questions display here"
+        android:textAlignment="center"
+        android:textColor="#FF9800"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.302" />
     <!--Unique ID to display the question-->
     <!--Width adjusted to text length-->
     <!--Height fixed to text content-->
@@ -87,29 +101,11 @@ tools:context=".MainActivity">
     <!--Text is aligned in the center-->
     <!--App has a constraint layout throughout for flexible use-->
 
-<!--Text will display the feedback to the user-->
-    <TextView
-        android:id="@+id/txtQuestion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:paddingBottom="16dp"
-        android:text="Questions display here"
-        android:textAlignment="center"
-        android:textColor="#FF9800"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.433"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.256" />
-
+    <!--Text will display the feedback to the user-->
     <TextView
         android:id="@+id/txtFeedback"
-        android:layout_width="53dp"
-        android:layout_height="35dp"
+        android:layout_width="108dp"
+        android:layout_height="33dp"
         android:text=""
         android:textAlignment="center"
         android:textColor="#000000"
