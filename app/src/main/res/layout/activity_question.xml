@@ -77,6 +77,17 @@ tools:context=".MainActivity">
     <!--Button has a constraint layout throughout for flexible use-->
 
 <!--Text will display the question to the user-->
+    <!--Unique ID to display the question-->
+    <!--Width adjusted to text length-->
+    <!--Height fixed to text content-->
+    <!--Display text-->
+    <!--Size of text-->
+    <!--Bold text style-->
+    <!--Orange text color-->
+    <!--Text is aligned in the center-->
+    <!--App has a constraint layout throughout for flexible use-->
+
+<!--Text will display the feedback to the user-->
     <TextView
         android:id="@+id/txtQuestion"
         android:layout_width="wrap_content"
@@ -93,18 +104,8 @@ tools:context=".MainActivity">
         app:layout_constraintHorizontal_bias="0.433"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.221" />
-    <!--Unique ID to display the question-->
-    <!--Width adjusted to text length-->
-    <!--Height fixed to text content-->
-    <!--Display text-->
-    <!--Size of text-->
-    <!--Bold text style-->
-    <!--Orange text color-->
-    <!--Text is aligned in the center-->
-    <!--App has a constraint layout throughout for flexible use-->
+        app:layout_constraintVertical_bias="0.256" />
 
-<!--Text will display the feedback to the user-->
     <TextView
         android:id="@+id/txtFeedback"
         android:layout_width="53dp"

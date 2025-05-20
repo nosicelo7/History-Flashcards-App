@@ -40,7 +40,7 @@ class ScoreScreen : AppCompatActivity() {
         findViewById<TextView>(R.id.feedbackTextView).text = "$message"
 
         // Set up the Exit button to close the app when clicked
-        findViewById<TextView>(R.id.btnExit).setOnClickListener {
+        findViewById<Button>(R.id.btnExit).setOnClickListener {
             finishAffinity()         // Closes all activities and exits the app
         }
     }
