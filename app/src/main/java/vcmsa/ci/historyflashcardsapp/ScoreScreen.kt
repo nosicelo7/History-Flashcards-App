@@ -5,6 +5,11 @@
 // Version: 1.0
 // Available:https://za.pinterest.com/pin/303359724920294592/
 
+//Title:IMAD5112 Module Manual
+//Author: The IIE
+//Date: 16 May 2025
+//Available:https://advtechonline.sharepoint.com/:w:/r/sites/TertiaryStudents/_layouts/15/Doc.aspx?sourcedoc=%7BA1FF62F0-8E1A-47BC-99BD-CA07AE24427D%7D&file=IMAD5112_MM.docx&action=default&mobileredirect=true
+
 package vcmsa.ci.historyflashcardsapp
 
 import android.content.Intent

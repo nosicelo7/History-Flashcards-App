@@ -5,6 +5,11 @@
 // Version: 1.0
 // Available:https://za.pinterest.com/pin/80431543340224772/
 
+//Title:IMAD5112 Module Manual
+//Author: The IIE
+//Date: 16 May 2025
+//Available:https://advtechonline.sharepoint.com/:w:/r/sites/TertiaryStudents/_layouts/15/Doc.aspx?sourcedoc=%7BA1FF62F0-8E1A-47BC-99BD-CA07AE24427D%7D&file=IMAD5112_MM.docx&action=default&mobileredirect=true
+
 package vcmsa.ci.historyflashcardsapp
 
 import android.content.Intent
@@ -17,9 +22,15 @@ import androidx.core.content.ContextCompat.startActivity
 
 data class Flashcard(val question: String, val answer: Boolean)
 
+//Title: Arrays
+//Author: Kotlin Programming Language
+//Date: 16 May 2025
+//Available:https://kotlinlang.org/docs/arrays.html
+
+//This activity displays the questions and allows the user to answer them
 class QuestionActivity : AppCompatActivity() {
     // List of questions, each with its text and answer
-    private val questionScreen = listOf(
+    private val questionScreen = arrayOf(
         Flashcard("The first World War started in 1914.", false),
         Flashcard("Mahatma Gandhi led the Salt March in India.", true),
         Flashcard("World War I ended in 1918.", true),
@@ -69,6 +80,11 @@ class QuestionActivity : AppCompatActivity() {
         // Display the feedback
         findViewById<TextView>(R.id.txtFeedback).text = feedback
     }
+
+    //Title: Create and use functions
+    //Author: Android Developer
+    //Date: 16 May 2025
+    //Available:https://developer.android.com/codelabs/basic-android-kotlin-compose-functions#5
 
     // Move to the next question or finish the quiz
     private fun showNextQuestion() {
